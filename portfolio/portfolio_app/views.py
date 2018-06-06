@@ -4,9 +4,8 @@ from django.http.response import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from Projects.models import Project
-from Projects.serializers import ProjectSerializer
-
+from portfolio_app.models import Project
+from portfolio_app.serializers import ProjectSerializer
 
 # Create your views here.
 def welcome(request):
