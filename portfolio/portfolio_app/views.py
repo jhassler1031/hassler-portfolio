@@ -22,9 +22,9 @@ class ProjectListAPIView(APIView):
         title = request.POST["title"]
         tech_used = request.POST["tech_used"]
         github_link = request.POST["github_link"]
-        project_description = request.POST["project_description"]
+        description = request.POST["description"]
 
-        Project.objects.create(title=title, tech_used=tech_used, github_link=github_link, project_description=project_description)
+        Project.objects.create(title=title, tech_used=tech_used, github_link=github_link, description=description)
         return Response({})
 
 class ProjectDetailAPIView(APIView):
@@ -38,7 +38,7 @@ class ProjectDetailAPIView(APIView):
         project.title = request.POST["title"]
         project.tech_used = request.POST["tech_used"]
         project.github_link = request.POST["github_link"]
-        project.project_description = request.POST["project_description"]
+        project.description = request.POST["description"]
         project.save()
         return Response({})
 
