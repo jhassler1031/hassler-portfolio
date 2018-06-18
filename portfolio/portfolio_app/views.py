@@ -3,6 +3,7 @@ from django.http.response import HttpResponse
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.views.generic import TemplateView
 
 from portfolio_app.models import Project
 from portfolio_app.serializers import ProjectSerializer
@@ -10,6 +11,9 @@ from portfolio_app.serializers import ProjectSerializer
 # Create your views here.
 def welcome(request):
     return HttpResponse("Welcome to John Hassler's Web Development Portfolio!")
+
+class IndexView(TemplateView):
+    template_name = "index.html"
 
 class ProjectListAPIView(APIView):
     def get(self, request):

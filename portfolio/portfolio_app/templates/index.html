@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, intial=1.0">
+
+  <title>My Portfolio Page</title>
+  <!--Need to link the CSS below  -->
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+  <h1 class="page-title">John Hassler's Portfolio</h1>
+
+  <header>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#About">About</li>
+        <li><a href="#Projects">Projects</li>
+        <li><a href="#Contact">Contact</li>
+        <li><a href="#Experience">Experience</li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section id="About">
+      <div>
+        <h1>ABOUT</h1>
+        <p>This is my About Me section!</p>
+      </div>
+
+      <div class="profile-pic"><img src="{% static 'img/profilepicture.jpg' %}" alt="Profile Pic"></div>
+
+    </section>
+
+
+    <section id="Projects"></section>
+    <h1>PROJECTS</h1>
+
+    <ul>
+      <!--  -->
+      <li><a href="https://github.com/jhassler1031/api-calc" target="<_blank">API Calculator</a></li>
+      <li>Project 2</li>
+      <li>Project 3</li>
+    </ul>
+
+    <section id="Contact"></section>
+      <h1>CONTACT</h1>
+
+    <section id="Experience"></section>
+    <h1>EXPERIENCE</h1>
+    <ul>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+
+  </main>
+
+  <aside></aside>
+  <footer>
+<!-- Use command / to start a comment section  -->
+  </footer>
+
+</body>
+
+</html>

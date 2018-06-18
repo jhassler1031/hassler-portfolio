@@ -1,0 +1,49 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  /* background-color: blue; */
+  box-sizing: border-box;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+img {
+  width: 100%;
+}
+
+.profile-pic {
+  width: 25%;
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  /* text-decoration: none; */
+  cursor-pointer: point;
+}
+
+a:hover {
+  color: red;
+}
+
+.page-title{
+  text-align: center;
+}
+
+.header-nav {
+  text-align: center;
+}
+.header-nav>li{
+  display: inline-block;
+  /* top right bottom left , could also just do one number*/
+  padding: 4px 10px;
+}
+
+#About {
+  display: flex;
+  line-item: center;
+}

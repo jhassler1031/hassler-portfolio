@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from portfolio_app.views import welcome, ProjectListAPIView, ProjectDetailAPIView
+from portfolio_app.views import welcome, ProjectListAPIView, ProjectDetailAPIView, IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', welcome),
+    path('', IndexView.as_view()),
     path('projects/', ProjectListAPIView.as_view()),
     path('projects/<int:pk>', ProjectDetailAPIView.as_view())
 ]
