@@ -10,8 +10,8 @@
 
   <title>My Portfolio Page</title>
   <!--Need to link the CSS below  -->
-  <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
       <h1>CONTACT</h1>
 
     <section id="Experience"></section>
-    <h1>EXPERIENCE</h1>
+      <h1>EXPERIENCE</h1>
     <ul>
       <li>Python</li>
       <li>HTML</li>
@@ -71,6 +71,10 @@
   <footer>
 <!-- Use command / to start a comment section  -->
   </footer>
+
+  <!-- Adding the below JS just for practice  -->
+  <script src="{% static 'js/app.js' %}" charset="utf-8"></script>
+
 
 </body>
 
