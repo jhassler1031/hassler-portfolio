@@ -125,4 +125,4 @@ STATICFILES_DIRS = [
 ]
 
 import django_heroku
-djangi_heroku.settings(local())
+django_heroku.settings(local())
