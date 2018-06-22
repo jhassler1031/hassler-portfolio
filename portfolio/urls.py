@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
-from portfolio_app.views import welcome, ProjectListAPIView, ProjectDetailAPIView, IndexView
+from portfolio_app.views import ProjectListAPIView, ProjectDetailAPIView, IndexView, FileView, FileDestroyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
     path('projects/', ProjectListAPIView.as_view()),
-    path('projects/<int:pk>', ProjectDetailAPIView.as_view())
+    path('projects/<int:pk>', ProjectDetailAPIView.as_view()),
+    path('upload/', FileView.as_view(), name='file-upload'),
+    path('upload/<int:pk>', FileDestroyView.as_view()),
 ]
+
+if settings.DEBUG:
+  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
